@@ -1,8 +1,12 @@
 package com.stackroute;
-
+//     Write a program to find the number of counts in the following  String .
+//     Store the output inMap< String ,Integer> as key value pair.
+//     Input :   String  str = “one one -one___two,,three,one @three*one?two”;
+//     Output : {"one":5 , "two":2, "three" :2}
 import java.util.*;
-
-public class numberCount {
+//Class NumberCount
+public class NumberCount {
+    //method countMap takes an string input and returns a map
     public static Map<String,Integer> countMap(String input){
         Map<String,Integer> returnMap =new HashMap<>();
         if(input==null){
@@ -23,8 +27,5 @@ public class numberCount {
             return returnMap;
         }
     }
-    public static void main(String[] args){
-        Map<String,Integer> map=countMap("one one -one___two,,three,one @three*one?two");
-        System.out.println(Arrays.asList(map));
-    }
+
 }

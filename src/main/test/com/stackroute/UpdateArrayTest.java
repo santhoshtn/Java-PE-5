@@ -3,17 +3,15 @@ package com.stackroute;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
-
 import java.util.ArrayList;
 import java.util.List;
-
 import static org.junit.Assert.*;
 
-public class updateArrayCheck {
-    updateArray object;
+public class UpdateArrayTest {
+    private UpdateArray object;
     @Before
     public void setUp() throws Exception {
-    object=new updateArray();
+    object=new UpdateArray();
     }
 
     @After
@@ -36,6 +34,12 @@ public class updateArrayCheck {
         List<String> str=new ArrayList<String>();
         str.add("mango");
         str.add("apple");
+        List<String> expected=new ArrayList<String>();
+        assertEquals(expected,object.empty(str));
+    }
+    @Test
+    public void nullCheck(){
+        List<String> str=new ArrayList<String>();
         List<String> expected=new ArrayList<String>();
         assertEquals(expected,object.empty(str));
     }

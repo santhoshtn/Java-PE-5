@@ -3,26 +3,26 @@ package com.stackroute;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
-
 import java.util.Map;
 import java.util.TreeMap;
-
 import static org.junit.Assert.*;
 
-public class mapReturnCheck {
-    mapReturn twoKeyValue;
+//Test class for map return program
+public class MapReturnTest {
+    private MapReturn twoKeyValue;
+    //setup method before each test method
     @Before
     public void setUp()
     {
-        twoKeyValue=new mapReturn();
+        twoKeyValue=new MapReturn();
     }
-
+    //teardown method after each test method call
     @After
     public void tearDown()
     {
         twoKeyValue=null;
     }
-
+    //success test method for the map return program
     @Test
     public void testTwoKeyValueSuccess()
     {
@@ -38,7 +38,7 @@ public class mapReturnCheck {
         assertEquals(expectedMap,actualMap);
 
     }
-
+    //Failure test method for the map return program
     @Test
     public void testTwoKeyValueFailure()
     {
@@ -53,7 +53,7 @@ public class mapReturnCheck {
 
         assertNotEquals(expectedMap,actualMap);
     }
-
+    //check for null case for return map program
     @Test
     public void testTwoKeyValueNeutral()
     {
